@@ -1,0 +1,105 @@
+body {
+    background-color: lightgray;
+    padding: 10px;
+    margin: 10px;
+}
+
+#Opening {
+    padding: 5px;
+    margin: 5px;
+    text-align: center;
+    font-family: Helvetica;
+}
+
+#UserInput {
+    text-align: center;
+    font-size: 30px;
+}
+
+#menangKalah {
+    text-align: center;
+    font-size: 50px;
+}
+
+#skorr {
+    text-align: center;
+}
+
+#boxAnswer {
+    position: relative;
+}
+
+#SkorBottt {
+    position: absolute;
+    font-size: 30px;
+    right: 40%;
+    color: red;
+}
+
+#SkorUserrr {
+    position: absolute;
+    font-size: 30px;
+    left: 40%;
+    color: blue;
+}
+
+#JawabanBot{
+    text-align: center;
+    color: red;
+    font-size: 50px;
+}
+
+@media only screen and (max-width: 380px){
+    body {
+        background-color: lightgray;
+        padding: 5px;
+        margin: 5px;
+    }
+
+    #Opening {
+        padding: 2px;
+        margin: 2px;
+        text-align: center;
+        font-family: Helvetica;
+    }
+    #inputNumber{
+        font-size: 20px;
+    }
+    #UserInput {
+        text-align: center;
+        font-size: 10px;
+    }
+
+    #menangKalah {
+        text-align: center;
+        font-size: 30px;
+    }
+
+    #skorr {
+        text-align: center;
+    }
+
+    #boxAnswer {
+        position: relative;
+    }
+
+    #SkorBottt {
+        position: absolute;
+        font-size: 30px;
+        right: 20%;
+        color: red;
+    }
+
+    #SkorUserrr {
+        position: absolute;
+        font-size: 30px;
+        left: 20%;
+        color: blue;
+    }
+
+    #JawabanBot{
+        text-align: center;
+        color: red;
+        font-size: 30px;
+    }
+}
