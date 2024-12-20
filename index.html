@@ -2,42 +2,41 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Guess the Number Game</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div>
+<header>
     <h1 id="Opening">LET'S PLAY A NUMBER GUESSING GAME!!!!</h1>
-</div>
+</header>
 
-<div id="skorr">
-    <h1>SKOR</h1>
-</div>
+<section id="skorr">
+    <h2>SKOR</h2>
+    <div id="boxAnswer">
+        <div id="SkorBottt">
+            <h3 id="botScore">0</h3>
+        </div>
+        <div id="SkorUserrr">
+            <h3 id="userScore">0</h3>
+        </div>
+    </div>
+</section>
 
-<div id="boxAnswer">
-    <div id="SkorBottt">
-        <h1 id="botScore">0</h1>
-    </div>
-    <div id="SkorUserrr">
-        <h1 id="userScore">0</h1>
-    </div>
-</div>
-<br><br><br><br><br><br><br><br><br><br>
-<div id="UserInput">
+<main id="UserInput">
     <label id="inputNumber">Guess the number between 1 - 10</label><br>
-    <input id="inputBox">
+    <input id="inputBox" type="number" min="1" max="10" placeholder="Enter your guess">
     <button id="submitButton">Submit</button>
-</div>
+</main>
 
-<div>
-    <h1 id="JawabanBot"></h1>
-</div>
-<div id="menangKalah">
-    <h1 id="kondisi">WIN/LOSE??</h1>
-</div>
+<section>
+    <h2 id="JawabanBot"></h2>
+</section>
+
+<section id="menangKalah">
+    <h2 id="kondisi">WIN/LOSE??</h2>
+</section>
 
 <script src="index.js"></script>
 </body>
