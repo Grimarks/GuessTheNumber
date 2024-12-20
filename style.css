@@ -1,105 +1,132 @@
 body {
-    background-color: lightgray;
-    padding: 10px;
-    margin: 10px;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: linear-gradient(to right bottom, #880e4f, #9b487a, #ac75a1, #be9fc3, #d5c9e0, #d3cbe2, #d1cee4, #d0d0e5, #aaafd2, #8290bf, #5572ad, #01579b);
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
 }
 
 #Opening {
-    padding: 5px;
-    margin: 5px;
     text-align: center;
-    font-family: Helvetica;
-}
-
-#UserInput {
-    text-align: center;
-    font-size: 30px;
-}
-
-#menangKalah {
-    text-align: center;
-    font-size: 50px;
+    color: #006064;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 #skorr {
     text-align: center;
+    margin: 20px 0;
+}
+
+#skorr h1 {
+    font-size: 2rem;
+    color: #004d40;
 }
 
 #boxAnswer {
-    position: relative;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    max-width: 600px;
+    margin: 20px 0;
+}
+
+#SkorBottt,
+#SkorUserrr {
+    text-align: center;
+    font-size: 1.5rem;
+    padding: 10px;
+    width: 120px;
+    border-radius: 8px;
 }
 
 #SkorBottt {
-    position: absolute;
-    font-size: 30px;
-    right: 40%;
-    color: red;
+    background-color: #f8bbd0;
+    color: #880e4f;
 }
 
 #SkorUserrr {
-    position: absolute;
-    font-size: 30px;
-    left: 40%;
-    color: blue;
+    background-color: #b3e5fc;
+    color: #01579b;
 }
 
-#JawabanBot{
+#UserInput {
     text-align: center;
-    color: red;
-    font-size: 50px;
+    margin-top: 20px;
 }
 
-@media only screen and (max-width: 380px){
-    body {
-        background-color: lightgray;
-        padding: 5px;
-        margin: 5px;
-    }
+#inputNumber {
+    font-size: 1.2rem;
+    color: #004d40;
+    margin-bottom: 10px;
+    display: block;
+}
 
+#inputBox {
+    width: 200px;
+    padding: 10px;
+    font-size: 1rem;
+    border: 2px solid #004d40;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+#submitButton {
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #00796b;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+#submitButton:hover {
+    background-color: #004d40;
+}
+
+#JawabanBot {
+    text-align: center;
+    color: #d32f2f;
+    font-size: 1.8rem;
+    margin-top: 20px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+#menangKalah {
+    text-align: center;
+    font-size: 2rem;
+    margin-top: 10px;
+    color: #00796b;
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 600px) {
     #Opening {
-        padding: 2px;
-        margin: 2px;
-        text-align: center;
-        font-family: Helvetica;
-    }
-    #inputNumber{
-        font-size: 20px;
-    }
-    #UserInput {
-        text-align: center;
-        font-size: 10px;
+        font-size: 2rem;
     }
 
-    #menangKalah {
-        text-align: center;
-        font-size: 30px;
-    }
-
-    #skorr {
-        text-align: center;
+    #inputNumber {
+        font-size: 1rem;
     }
 
     #boxAnswer {
-        position: relative;
+        flex-direction: column;
+        gap: 10px;
     }
 
-    #SkorBottt {
-        position: absolute;
-        font-size: 30px;
-        right: 20%;
-        color: red;
+    #JawabanBot {
+        font-size: 1.5rem;
     }
 
-    #SkorUserrr {
-        position: absolute;
-        font-size: 30px;
-        left: 20%;
-        color: blue;
-    }
-
-    #JawabanBot{
-        text-align: center;
-        color: red;
-        font-size: 30px;
+    #menangKalah {
+        font-size: 1.8rem;
     }
 }
