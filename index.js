@@ -1,38 +1,40 @@
-let submitButton = document.getElementById("submitButton");
-let inputBox = document.getElementById("inputBox");
-let kondisiElement = document.getElementById("kondisi");
-let userScoreElement = document.getElementById("userScore");
-let botScoreElement = document.getElementById("botScore");
-let jawabanBot = document.getElementById("JawabanBot");
+const submitButton = document.getElementById("submitButton");
+const inputBox = document.getElementById("inputBox");
+const kondisiElement = document.getElementById("kondisi");
+const userScoreElement = document.getElementById("userScore");
+const botScoreElement = document.getElementById("botScore");
+const jawabanBot = document.getElementById("JawabanBot");
+
 let userScore = 0;
 let botScore = 0;
 
-submitButton.onclick = function() {
-    let userInput = inputBox.value.trim();
+submitButton.addEventListener("click", () => {
+    const userInput = inputBox.value.trim();
+
     if (userInput === "") {
         alert("Please enter a number!");
         return;
     }
-    userInput = parseInt(userInput);
-    if (isNaN(userInput)) {
+
+    const userNumber = parseInt(userInput);
+    if (isNaN(userNumber) || userNumber < 1 || userNumber > 10) {
         alert("Invalid input! Please enter a number between 1 and 10.");
         return;
     }
-    if (userInput < 1 || userInput > 10) {
-        alert("Please enter a number between 1 and 10.");
-        return;
-    }
-    let random = Math.floor(Math.random() * 10) + 1;
-    if (userInput === random) {
-        jawabanBot.textContent = `BOT CHOOSE ${random}`;
+
+    const botNumber = Math.floor(Math.random() * 10) + 1;
+
+    jawabanBot.textContent = `BOT CHOOSE ${botNumber}`;
+    if (userNumber === botNumber) {
         kondisiElement.textContent = "YOU WIN";
         userScore++;
         userScoreElement.textContent = userScore;
     } else {
-        jawabanBot.textContent = `BOT CHOOSE ${random}`;
         kondisiElement.textContent = "YOU LOSE";
         botScore++;
         botScoreElement.textContent = botScore;
     }
+
     inputBox.value = "";
-};
+    inputBox.focus();
+});
